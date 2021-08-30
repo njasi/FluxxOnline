@@ -1,0 +1,68 @@
+{
+  "name": "fluxxonline",
+  "version": "1.0.0",
+  "description": "play the cardgame flux online io style",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-watch": "webpack --watch",
+    "start": "node -r ts-node/register src/server",
+    "start-server": "nodemon -r ts-node/register src/server -e html,js,ts,scss --ignore public --ignore src/client",
+    "start-dev": "NODE_ENV='development' npm run build-watch & NODE_ENV='development' npm run start-server &",
+    "test": "echo \"no tests lol\" && exit 1",
+    "heroku-prebuild": "npm install --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njasi/FluxxOnline.git"
+  },
+  "author": "njasi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/njasi/FluxxOnline/issues"
+  },
+  "homepage": "https://github.com/njasi/FluxxOnline#readme",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/plugin-proposal-export-namespace-from": "^7.14.5",
+    "@babel/plugin-proposal-function-sent": "^7.14.5",
+    "@babel/plugin-proposal-json-strings": "^7.14.5",
+    "@babel/plugin-proposal-numeric-separator": "^7.14.5",
+    "@babel/plugin-proposal-throw-expressions": "^7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/register": "^7.15.3",
+    "@types/compression": "^1.7.1",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.25.0",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "react": "^17.0.2",
+    "socket.io": "^4.1.3"
+  }
+}
